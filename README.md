@@ -13,6 +13,8 @@ With the parameter -m YYYY-MM the month to display can be selected.
 In contrast to the *cal* command this script also lists birtdays and
 holidays.
 
+***Caution:*** The calendar speaks German.
+
 ### Birthday
 
 The script *bday.sh* is used by the script *cal.sh*. It contains the functionality for birthdays.
