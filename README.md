@@ -13,7 +13,7 @@ With the parameter -m YYYY-MM the month to display can be selected.
 In contrast to the *cal* command this script also lists birtdays and
 holidays.
 
-### Birtday
+### Birthday
 
 The script *bday.sh* is used by the script *cal.sh*. It contains the functionality for birthdays.
 The directory *~/.config/cal/bday* contains birthday files. The file name is used as the persons name and the file contains the persons birtday in the format: **MM-DD**.
