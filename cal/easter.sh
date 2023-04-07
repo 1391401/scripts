@@ -53,6 +53,7 @@ runTests() {
     verifyEaster 1943-04-25
     verifyEaster 1954-04-18
     verifyEaster 1961-04-02
+    verifuEaster 1975-03-30
     verifyEaster 1981-04-19
     verifyEaster 2000-04-23
     verifyEaster 2008-03-23

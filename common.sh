@@ -83,7 +83,7 @@ showDone() {
     echo ""
     echo -e "${WHITE}done${NC} ${color}${smiley}${NC}"    
     echo "${curTS} ${scriptName} ${smiley} ${errCount} ${scriptDuration}" >> ${statFile}
-   echo ""
+    echo ""
 }
 
 getValueFromLine() {

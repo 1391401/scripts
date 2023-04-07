@@ -3,7 +3,7 @@
 # file    bday.sh
 # date    2023-04-05
 # author  Peter Zwettler <peter@zwettler.net>
-# licence GNU General Public License version 3
+# license GNU General Public License version 3
 
 bdayLoaded=1
 

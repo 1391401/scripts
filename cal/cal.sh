@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# file: cal.sh
-# date: 2023-04-03
-# author Peter Zwettler <peter@zwettler.net>
-
+# file    cal.sh
+# date    2023-04-03
+# author  Peter Zwettler <peter@zwettler.net>
+# license GNU General Public License version 3
 
 eval includeDir="~/dev/scripts"
 
@@ -30,12 +30,10 @@ options:
   -m YYYY-MM       show month
 "
 
-
 curYear=`date +%Y`
 curMonth=`date +%m`
 curDay=`date +%d`
 dayOfWeek=`date +%w`
-
 
 FG_BLACK=30
 FG_RED=31
@@ -166,8 +164,6 @@ renderMonth() {
     echo "└────────────────────────────┘"
 }
 
-readBDays
-readPubHolidays
 
 showMonth=$curMonth
 showYear=$curYear
@@ -182,9 +178,9 @@ while getopts "hm:" FLAG ; do
            exit 0
            ;;
 
-        m) month=$OPTARG
-           showYear=${month:0:4}
-           showMonth=${month:5}
+        m) input=$OPTARG
+           showYear=${input:0:4}
+           showMonth=${input:5}
            ;;
 
         \?) echo "unrecognized option $OPTARG"
@@ -195,6 +191,9 @@ while getopts "hm:" FLAG ; do
 done
 
 fixedShowMonth=`removeLeadingZero "${showMonth}"`
+readBDays
+easterDate=`calcEaster ${showYear}`
+readPubHolidays
 
 echo ""
 renderMonth "${showYear}" "${fixedShowMonth}"
